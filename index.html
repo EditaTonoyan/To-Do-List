@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./css/global.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header class="main__header">
+        <div class="container"> 
+            <div class="main__header_content">
+                <img src="./images/logo.png" alt="logo" class="main__header_content_logo">
+                <h1 class="main__header_content_title">To Do List</h1>
+            </div>
+            <div>
+                <p class="header_task_count">Total <span>0</span> Todo</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main__content">
+        <div class="container">
+            <div class="create">
+                <input type="text" class="create_new_task" placeholder="To Do Text">
+                <button class="create_button">Create</button>
+            </div>
+
+            <div class="main__card"> 
+                <div class="main__card_item">
+                    <div class="flex">
+                        <input class="card_item" type="checkbox">
+                        <p class="card_item">Create TODO list using HTML/CSS JavaScript</p>
+                    </div>
+                    <div>
+                        <button class="card_item">Edit</button>
+                        <button class="card_item">Delete</button>
+                    </div>
+                
+                </div>
+
+                <div role="button" class="complated">
+                    <p>Completed</p>
+                    <img src="./images/arrow_down.png" alt="arrow" class="complated_arrow">
+                </div>
+
+                <div class="main__card_item">
+                    <div class="flex">
+                        <input class="card_item" type="checkbox">
+                        <p class="card_item">Create TODO list using HTML/CSS JavaScript</p>
+                    </div>
+                    <div>
+                        <button class="card_item">Edit</button>
+                        <button class="card_item">Delete</button>
+                    </div>
+                
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+
+</body>
+</html>
