@@ -12,6 +12,7 @@
     <title>To Do List</title>
   </head>
   <body>
+    <div class="backdrop"></div>
     <header class="main__header">
       <div class="container">
         <div class="main__header_content">
@@ -25,6 +26,18 @@
     </header>
 
     <main class="main__content">
+      <div class="modal">
+        <img src="./images/close.jpg" alt="close" class="modal__form_image">
+            <div class="modal__form_item">
+                <label for="TskName">Task Title</label>
+                <input type="text"  class="modal_title" name="taskTitle" value="" required>
+            </div>
+            <p class="config_errors"></p>
+            <div>
+                <button type="submit" class="button_close" id="confirm-button">Cancel</button>
+                <button type="submit" class="button_save" id="confirm-button">Save</button>
+            </div>
+      </div>
         <div class="container">
             <div class="create">
             <input type="text" class="create_new_task" placeholder="To Do Text" value="" required />
@@ -33,8 +46,6 @@
 
             <div class="main__card">
                 <div class="main__card_items">
-                    <!-- <input class="main__card_item"/> -->
-                        
                     <p class="main__card_items_text">There are no task</p> 
                 </div>
                 <div role="button" class="complated">
