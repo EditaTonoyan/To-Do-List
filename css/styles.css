@@ -81,6 +81,11 @@ body{
     /* display: none; */
 }
 
+.main__card_items{
+    color:rgb(48 132 198);
+    text-align: center;
+}
+
 .main__card_item{
     display: flex;
     justify-content: space-between;
@@ -88,6 +93,7 @@ body{
     border: 1px solid rgb(192, 196, 196);
     padding: 14px;
     background-color: white;
+    margin:10px 0;
 
 }
 .card_item:first-child{
@@ -97,10 +103,18 @@ body{
     margin-left: 15px;
 }
 
+.card__item_text{
+    color:red;
+    font-size: 42px;
+}
+
 .complated{
     color:rgb(39 118 176);
-    display: flex;
     padding: 15px 0;
+}
+
+.complated__task_button{
+    display: flex;
 }
 
 .complated_arrow{
@@ -108,6 +122,7 @@ body{
     width: 14px;
     margin: 3px 0 0 5px;
 }
+
 .card_item_second:first-child{
     padding:6px;
     border-radius: 6px;
@@ -116,7 +131,9 @@ body{
     background-color: #fff;
 
 }
-
+.main__card_item_edit{
+    border:none;
+}
 .card_item_second:first-child:hover{
     color:rgb(255, 255, 255);
     background-color: rgb(197, 226, 248);

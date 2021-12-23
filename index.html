@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./images/logo.png" />
     <link rel="stylesheet" href="./css/global.css" />
-    <script src="./javaScript/app.js" defer></script>
+    <script src="javaScript/get.js" defer></script>
     <script src="./javaScript/config.js" defer></script>
+    <script src="./javaScript/app.js" defer></script>
     <title>To Do List</title>
   </head>
   <body>
@@ -24,41 +25,26 @@
     </header>
 
     <main class="main__content">
-      <div class="container">
-        <div class="create">
-          <input type="text" class="create_new_task" placeholder="To Do Text" value="" required />
-          <button class="create_button">Create</button>
+        <div class="container">
+            <div class="create">
+            <input type="text" class="create_new_task" placeholder="To Do Text" value="" required />
+            <button class="create_button">Create</button>
+            </div>
+
+            <div class="main__card">
+                <div class="main__card_items">
+                    <!-- <input class="main__card_item"/> -->
+                        
+                    <p class="main__card_items_text">There are no task</p> 
+                </div>
+                <div role="button" class="complated">
+                    <div class="complated__task_button">
+                        <p>Completed</p>
+                        <img src="./images/arrow_down.png" alt="arrow" class="complated_arrow" />
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="main__card">
-          <div class="main__card_item">
-            <div class="flex">
-              <input class="card_item" type="checkbox" />
-              <p class="card_item">Create TODO list using HTML/CSS JavaScript 5</p>
-            </div>
-            <div>
-              <button class="card_item_second">Edit</button>
-              <button class="card_item_second">Delete</button>
-            </div>
-          </div>
-
-          <div role="button" class="complated">
-            <p>Completed</p>
-            <img src="./images/arrow_down.png" alt="arrow" class="complated_arrow" />
-          </div>
-
-          <div class="main__card_item">
-            <div class="flex">
-              <input class="card_item" type="checkbox" />
-              <p class="card_item">Create TODO list using HTML/CSS JavaScript</p>
-            </div>
-            <div>
-              <button class="card_item_second">Edit</button>
-              <button class="card_item_second">Delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
   </body>
 </html>
