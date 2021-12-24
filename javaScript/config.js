@@ -88,12 +88,12 @@ function create(htmlStr) {
         curentInput.style.display = 'none';
         const compTask =`<div class="main__card_item">
                               <div class="flex">
-                                <input class="card_item cheked_box" type="checkbox"  name="check" checked/>
+                                <input class="card_item complated_cheked_box" type="checkbox"  name="check" checked/>
                                 <p class="card_item complated_task" >${compTaskTitle}</p>
                               </div>
                         </div>`;
         let fragment = create(compTask);
-        complatedTasks.append(fragment);
+        complatedItems.append(fragment);
         totalCount.textContent--;
         complatedTaskButton.style.display = 'flex';
     } else{
@@ -101,6 +101,11 @@ function create(htmlStr) {
     }
   }
 
+
+  const toggleUcheckBox = (event) => {
+    curentInput =  event.target.parentElement.parentElement;
+    console.log(curentInput);
+  }
   const onClickComplatedButton = () => {
     complatedArrow.classList.toggle('complated_arrow_rotate');
     complatedItems.classList.toggle('complated_items_toggle');

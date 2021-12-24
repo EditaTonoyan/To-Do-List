@@ -17,10 +17,10 @@ const saveModal = document.querySelector('.button_save');
 const confirmYesModal = document.querySelector('.button_confirm_yes');
 const closeImage = document.querySelector('.modal__form_image');
 const confirmCloseImage = document.querySelector('.confirm_modal_form_image');
-// const confirmModal = document.querySelector('.confirm__modal');
 const closeConfirmButton = document.querySelector('.button_confirm_close');
 const confirmModalInputTaskText = document.querySelector('.confirm__modal_task_text');
-const checkedBox  = document.querySelectorAll('.cheked_box');
+const checkedBox = document.querySelectorAll('.cheked_box');
+const complatedCheckedBox = document.querySelector('.complated_cheked_box')
 const complatedTasks = document.querySelector('.complated');
 const complatedTaskButton = document.querySelector('.complated__task_button');
 const complatedArrow = document.querySelector('.complated_arrow');
@@ -37,7 +37,7 @@ backdropElement.addEventListener('click', closemodal);
 closeImage.addEventListener('click', closemodal);
 confirmCloseImage.addEventListener('click', closemodal);
 confirmYesModal.addEventListener('click', deleteTask);
-complatedTaskButton.addEventListener('click', onClickComplatedButton)
+complatedTaskButton.addEventListener('click', onClickComplatedButton);
 for (let buttons of editButtonElement){
     buttons.addEventListener('click', editTask);
 }
@@ -49,3 +49,4 @@ for(let check of checkedBox){
     check.addEventListener('click', toggleCheckBox )
 }
 
+complatedCheckedBox.addEventListener('click', toggleUcheckBox )
