@@ -29,19 +29,30 @@
       <div class="modal">
         <img src="./images/close.jpg" alt="close" class="modal__form_image">
             <div class="modal__form_item">
-                <label for="TskName">Task Title</label>
-                <input type="text"  class="modal_title" name="taskTitle" value="" required>
+                <div class="modal__form_title">Add new task title</div>
+                <input type="text"  class="modal_title" value="" name="taskTitle">
             </div>
-            <p class="config_errors"></p>
-            <div>
+            <div class="modal_buttons">
                 <button type="submit" class="button_close" id="confirm-button">Cancel</button>
                 <button type="submit" class="button_save" id="confirm-button">Save</button>
             </div>
       </div>
+      <div class="confirm__modal">
+        <img src="./images/close.jpg" alt="close" class="confirm_modal_form_image">
+          <div class= :>
+            <h4 class="confirm__modal_question">Are you wont to delete <span class="confirm__modal_task_text">taskText</span> task</h4>
+          </div>
+          <div class="modal_buttons">
+            <button type="submit" class="button_confirm_close">No</button>
+            <button type="submit" class="button_confirm_yes" id="confirm-button">Yes</button>
+          </div>
+      </div>
+      
         <div class="container">
+          <div class="succes_mesage">Task is successfuly added!</div>
             <div class="create">
-            <input type="text" class="create_new_task" placeholder="To Do Text" value="" required />
-            <button class="create_button">Create</button>
+                <input type="text" class="create_new_task" placeholder="To Do Text" value="" name="text"/>
+                <button class="create_button">Create</button>
             </div>
 
             <div class="main__card">
@@ -52,6 +63,10 @@
                     <div class="complated__task_button">
                         <p>Completed</p>
                         <img src="./images/arrow_down.png" alt="arrow" class="complated_arrow" />
+                    </div>
+
+                    <div class="complated_items">
+
                     </div>
                 </div>
             </div>

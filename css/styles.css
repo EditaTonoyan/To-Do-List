@@ -72,13 +72,24 @@ body{
     border: 1px solid rgb(25, 26, 26);
 }
 
+.succes_mesage{
+    padding:8px 0;
+    text-align: center;
+    display: block;
+    color:rgb(1, 12, 4);
+    background-color: rgba(113, 202, 125, 0.342);
+    font-size: 18px;
+    margin: 15px 0;
+    width: 100%;
+    display: none;
+}
+
 .main__card{
     width: 100%;
     min-height: 100vh;
     padding:50px 16px 0 16px;
     box-shadow: 0 4px 38px rgb(9 64 103 / 12%);
     background-color: white;
-    /* display: none; */
 }
 
 .main__card_items{
@@ -107,20 +118,30 @@ body{
     color:red;
     font-size: 42px;
 }
-
 .complated{
     color:rgb(39 118 176);
     padding: 15px 0;
 }
-
 .complated__task_button{
-    display: flex;
+    display: none;
 }
 
 .complated_arrow{
     height: 14px;
     width: 14px;
     margin: 3px 0 0 5px;
+}
+
+.complated_items_toggle{
+    display: none;
+}
+
+.complated_arrow_rotate{
+    transform: rotate(180deg);
+}
+
+.complated_task{
+    text-decoration: line-through;
 }
 
 .card_item_second:first-child{
@@ -157,34 +178,29 @@ body{
     background-color: rgb(247, 128, 128);
 
 }
-
-/* .modal{
-    text-align: center;
-} */
 .modal_header{
     margin: 0.5rem 0;
 }
-
 .modal__form_item{
     margin:0.5rem 0;
 }
-.modal__form_item label{
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+
+.modal_title{
+    border: 1px solid rgb(204, 204, 204);
+    padding: 8px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
 }
-.modal__form_item input{
-    font: inherit;
-    border:1px solid rgb(204, 204, 204);
-    width: 15rem ;
-    padding: 0.35rem;
-}
-.modal__form_image{
+
+.modal__form_image, .confirm_modal_form_image{
     position: absolute;
     width: 20px;
     height: 20px;
     top:0;
     right: 0;
+    border-radius: 6px;
 }
 
 .modal{
@@ -192,7 +208,27 @@ body{
     text-align: center;
     position: fixed;
     top:20%;
-    left: calc(50% - 140px);
+    left: calc(50% - 305px);
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.modal__form_title{
+    padding: 0 16px 16px;
+    color:rgb(58, 60, 61);
+    font-size: 24px;
+}
+.confirm__modal{
+    position: relative;
+    text-align: center;
+    position: fixed;
+    top:20%;
+    left: calc(50% - 208px);
     max-width: 100%;
     background-color: white;
     padding: 1rem;
@@ -200,6 +236,49 @@ body{
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     display: none;
 }
+
+.confirm__modal_task_text {
+    font-style: italic;
+    color: #181ca1b5;
+}
+.confirm__modal_question{
+    padding: 0 24px 24px;
+    color:rgb(58, 60, 61);
+    font-size: 18px;
+}
+.modal_buttons{
+    padding-top: 10px;
+}
+
+.button_confirm_close, .button_close{
+    padding: 2px;
+    margin-right: 5px;
+    color: rgb(58, 60, 61);
+    background-color: rgb(168, 168, 168);
+    border-radius: 5px;
+    width: 56px;
+    border: 1px solid rgb(168, 168, 168);
+}
+.button_confirm_yes, .button_save {
+    padding: 2px;
+    margin-right: 5px;
+    color: rgb(58, 60, 61);
+    background-color: rgba(4, 140, 245, .3);
+    border-radius: 5px;
+    width: 56px;
+    border: 1px solid rgba(4, 140, 245, .3);
+}
+
+
+.button_confirm_close:hover, .button_close:hover{
+    background-color: rgb(226, 226, 226);
+
+}
+
+.button_confirm_yes:hover, .button_save:hover {
+    background-color: rgba(107, 183, 241, 0.3);
+}
+
 .backdrop{
     position: fixed;
     top:0;
@@ -208,5 +287,4 @@ body{
     height: 100%;
     background-color: rgba(0,0,0,0.7);
     display: none;
-
 }
