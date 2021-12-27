@@ -1,10 +1,8 @@
-const inputValue = document.querySelector(".create_new_task");
 const totalCount = document.querySelector("#totalCount");
-
+const inputValue = document.querySelector(".create_new_task");
 const addButton = document.querySelector(".create_button");
 const mainCardItemText = document.querySelector('.main__card_items_text');
 const mainCarditem = document.querySelector('.main__card_item');
-let mainCard = document.querySelector('.main__card');
 const editButtonElement = document.querySelectorAll('.edit_button');
 const deleteButtonElement = document.querySelectorAll('.delete_button');
 const cardItem = document.querySelector('#card_item');
@@ -25,8 +23,7 @@ const complatedTasks = document.querySelector('.complated');
 const complatedTaskButton = document.querySelector('.complated__task_button');
 const complatedArrow = document.querySelector('.complated_arrow');
 const complatedItems = document.querySelector('.complated_items');
-const successMessage = document.querySelector('.succes_mesage')
-
+const successMessage = document.querySelector('.succes_mesage');
 
 
 addButton.addEventListener('click', handlecreateTask);
@@ -38,9 +35,11 @@ closeImage.addEventListener('click', closemodal);
 confirmCloseImage.addEventListener('click', closemodal);
 confirmYesModal.addEventListener('click', deleteTask);
 complatedTaskButton.addEventListener('click', onClickComplatedButton);
+
 for (let buttons of editButtonElement){
     buttons.addEventListener('click', editTask);
 }
+
 for(let delButtons of deleteButtonElement){
     delButtons.addEventListener('click', OpenConfirmModal )
 }
@@ -48,5 +47,3 @@ for(let delButtons of deleteButtonElement){
 for(let check of checkedBox){
     check.addEventListener('click', toggleCheckBox )
 }
-
-complatedCheckedBox.addEventListener('click', toggleUcheckBox )

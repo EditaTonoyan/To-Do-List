@@ -17,6 +17,8 @@ function create(htmlStr) {
       inputValue.value = "";
       localStorage.setItem(`${taskTitle}`, taskTitle);
       mainCardItemText.style.display = 'none';
+      inputValue.style.border = '1px solid rgb(192, 196, 196)';
+      inputValue.style.backgroundColor = '#fff';
           const taskItem = `<div class="main__card_item">
                               <div class="flex">
                                 <input class="card_item cheked_box" type="checkbox" name="check"/>
@@ -36,15 +38,16 @@ function create(htmlStr) {
       }, 3000)
   }
 
-
   let curentInput = '';
   const editTask = (event) => {
-
     curentInput = event.target.parentElement.parentElement.querySelector('.card__item_p');
     const inputValue = event.target.parentElement.parentElement.querySelector('.card__item_p').textContent;  
     modalInput.value = inputValue;
     modalElement.style.display = 'block';
     backdropElement.style.display = 'block';
+    modalInput.style.border = '1px solid rgb(204, 204, 204)';
+    modalInput.style.backgroundColor = '#f9f9f9';
+ 
   }
 
   const closemodal = () => {
@@ -63,6 +66,8 @@ function create(htmlStr) {
     curentInput.textContent = modalInputText;
     modalElement.style.display = 'none';
     backdropElement.style.display = 'none';
+  
+
   }
 
   const OpenConfirmModal = (event) => {
@@ -86,7 +91,7 @@ function create(htmlStr) {
     const compTaskTitle = curentInput.querySelector('.card__item_p').textContent;
     if (checkedCurrentElement.checked == true){
         curentInput.style.display = 'none';
-        const compTask =`<div class="main__card_item">
+        const compTask =`<div class="main__card_item compllated_checkbox" >
                               <div class="flex">
                                 <input class="card_item complated_cheked_box" type="checkbox"  name="check" checked/>
                                 <p class="card_item complated_task" >${compTaskTitle}</p>
@@ -97,10 +102,13 @@ function create(htmlStr) {
         totalCount.textContent--;
         complatedTaskButton.style.display = 'flex';
     } else{
-          curentInput.querySelector('.card__item_p').style.textDecoration = 'none'
+      curentInput.querySelector('.card__item_p').style.textDecoration = 'none'
     }
-  }
 
+
+    const conmplatedInput = document.querySelector('.complated_cheked_box');
+
+  }
 
   const toggleUcheckBox = (event) => {
     curentInput =  event.target.parentElement.parentElement;

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
   
     font-family: "roboto", sans-serif;
@@ -21,8 +22,10 @@ body{
 .flex {
     display: flex;
 }
+
 .main__header{
-    padding: 115px 0 62px;}
+    padding: 115px 0 62px;
+}
 
 .main__header_content {
     display: flex;
