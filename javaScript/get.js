@@ -1,7 +1,7 @@
 let mainCardItems = document.querySelector(".main__card_items");
 const mainCardItemText1 = document.querySelector('.main__card_items_text');
-function create(htmlStr) {
-    var frag = document.createDocumentFragment(),
+const  create = (htmlStr) => {
+    let frag = document.createDocumentFragment(),
     temp = document.createElement("div");
     temp.innerHTML = htmlStr;
     while (temp.firstChild) {
@@ -10,7 +10,7 @@ function create(htmlStr) {
     return frag;
 }
 const storageTasks = Object.values(localStorage);
-totalCount.textContent = storageTasks.length;
+totalCount.textContent = `${storageTasks.length}`;
 if(storageTasks){
     for(let task of storageTasks){
     mainCardItemText1.style.display = 'none';
@@ -27,7 +27,4 @@ if(storageTasks){
                     let fragment = create(taskItemText);
                     mainCardItems.append(fragment);
     }   
-}else{
-
-    console.log(444)
 }

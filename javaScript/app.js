@@ -5,12 +5,11 @@ const mainCardItemText = document.querySelector('.main__card_items_text');
 const mainCarditem = document.querySelector('.main__card_item');
 const editButtonElement = document.querySelectorAll('.edit_button');
 const deleteButtonElement = document.querySelectorAll('.delete_button');
-const cardItem = document.querySelector('#card_item');
 const modalElement = document.querySelector('.modal');
 const ConfirmModalElement = document.querySelector('.confirm__modal');
 const backdropElement = document.querySelector('.backdrop');
 const modalInput = document.querySelector('.modal_title');
-const closeModal = document.querySelector('.button_close');
+const closeModalElement = document.querySelector('.button_close');
 const saveModal = document.querySelector('.button_save');
 const confirmYesModal = document.querySelector('.button_confirm_yes');
 const closeImage = document.querySelector('.modal__form_image');
@@ -26,13 +25,13 @@ const complatedItems = document.querySelector('.complated_items');
 const successMessage = document.querySelector('.succes_mesage');
 
 
-addButton.addEventListener('click', handlecreateTask);
-closeModal.addEventListener('click', closemodal);
-closeConfirmButton.addEventListener('click', closemodal)
+addButton.addEventListener('click', handleCreateTask);
+closeModalElement.addEventListener('click', closeModal);
+closeConfirmButton.addEventListener('click', closeModal)
 saveModal.addEventListener('click', saveEditedText);
-backdropElement.addEventListener('click', closemodal);
-closeImage.addEventListener('click', closemodal);
-confirmCloseImage.addEventListener('click', closemodal);
+backdropElement.addEventListener('click', closeModal);
+closeImage.addEventListener('click', closeModal);
+confirmCloseImage.addEventListener('click', closeModal);
 confirmYesModal.addEventListener('click', deleteTask);
 complatedTaskButton.addEventListener('click', onClickComplatedButton);
 
@@ -41,9 +40,9 @@ for (let buttons of editButtonElement){
 }
 
 for(let delButtons of deleteButtonElement){
-    delButtons.addEventListener('click', OpenConfirmModal )
+    delButtons.addEventListener('click', openConfirmModal );
 }
 
 for(let check of checkedBox){
-    check.addEventListener('click', toggleCheckBox )
+    check.addEventListener('click', toggleCheckBox );
 }
